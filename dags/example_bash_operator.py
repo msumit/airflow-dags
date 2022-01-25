@@ -29,6 +29,7 @@ with DAG(
     schedule_interval='*/5 * * * *',
     start_date=datetime(2021, 1, 1),
     catchup=False,
+    max_active_runs=1,
     dagrun_timeout=timedelta(minutes=60),
     tags=['example', 'example2'],
     params={"example_key": "example_value"},
