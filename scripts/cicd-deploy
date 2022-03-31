@@ -3,5 +3,5 @@ set -euo pipefail
 
 /usr/local/bin/docker build -t registry.$BASE_DOMAIN/$RELEASE_NAME/airflow:ci-latest .
 /usr/local/bin/docker login registry.$BASE_DOMAIN -u _ -p $SERVICE_ACCOUNT_KEY
-/usr/local/bin/docker push registry.$BASE_DOMAIN/$RELEASE_NAME/airflow:ci-latest
+/usr/local/bin/docker push registry.$BASE_DOMAIN/$RELEASE_NAME/airflow:ci-$BUILDKITE_BUILD_NUMBER
 
